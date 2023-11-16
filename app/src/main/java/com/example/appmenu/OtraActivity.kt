@@ -12,6 +12,8 @@ class OtraActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_otra)
+        initComponents()
+        initUI()
     }
 
     private fun initComponents() {
@@ -21,7 +23,7 @@ class OtraActivity : AppCompatActivity() {
     private fun initUI() {
         val saludo2:String = "Hola esto es la actividad del botón 1"
         val saludo:String = intent.extras?.getString("SALUDOS $saludo2").orEmpty()
-        sal.text = saludo
+        sal.text = "SALUDOS $saludo2"
     }
 
 }
